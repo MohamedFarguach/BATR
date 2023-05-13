@@ -86,7 +86,6 @@ return  ligneLivraisonDTO;
 // TODO: handle exception
 log.trace("  la methode ModefierLigneLivraisonDTO"+ligneLivraison);
 
-System.out.println("Modefier LigneLivraison "+e);
 }
 return  null;
 
@@ -112,12 +111,9 @@ public Filelivraison saveFile(MultipartFile file) throws IOException {
     fileEntity.setFileName(fileName);
     fileEntity.setFileType(file.getContentType());
     fileEntity.setData(file.getBytes());
-    if(file!=null) {
-        Filelivraison fileEntity2 = filelivraisonRepository.save(fileEntity);
-  this.id= fileEntity2.getId();
-    return fileEntity2;
-    }
-	return null;
+    Filelivraison fileEntity2 = filelivraisonRepository.save(fileEntity);
+	this.id = fileEntity2.getId();
+	return fileEntity2;
  
 }
 ////////////////////// Modefier file ////////////////////
@@ -129,12 +125,9 @@ fileEntity.setId(idd);
 fileEntity.setFileName(fileName);
 fileEntity.setFileType(file.getContentType());
 fileEntity.setData(file.getBytes());
-if(file!=null) {
 Filelivraison fileEntity2 = filelivraisonRepository.save(fileEntity);
-this.id2= fileEntity2.getId();
+this.id2 = fileEntity2.getId();
 return fileEntity2;
-}
-return null;
 
 }
 
@@ -161,7 +154,6 @@ Optional<LigneLivraison> ligneLivraison =   ligneLivraisonRepository.findById(id
 LigneLivraisonDTO ligneLivraisonDTO  = myMapper.FindLivraisonDTO(ligneLivraison);
 try {
 return ligneLivraisonDTO;
-//return     (ChauffeurDTO) chauffeur.stream().map(myMapper::toChauffeurDTO).collect(Collectors.toList());
 } catch (Exception e) {
 log.trace("  la methode FindLivraison"+ligneLivraisonDTO);
 System.out.println("FindLivraison methode exception"+e);

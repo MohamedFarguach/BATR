@@ -52,7 +52,6 @@ public class FilelivraisonRestControler {
 //////////////////////////////////////////////
 	  @PutMapping(path="/upload/{id}") 
 	  public ResponseEntity<Filelivraison> uploadFile(@RequestParam("file") MultipartFile file, @PathVariable long id ) throws IOException {
-		 
 	  Filelivraison fileEntity = serviceLigneLivraison.ModefierFile(file,id); 
 	  return ResponseEntity.ok().body(fileEntity);
 	  }

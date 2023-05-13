@@ -85,8 +85,8 @@ public class LigneLivraison {
 	    private String modifierPar; 
 	   
 	    @LastModifiedDate
-	    @Temporal(TemporalType.TIME)
-	    private Date  dateModifier;
+	    @Temporal(TemporalType.TIMESTAMP)
+	    private Date dateModifier;
 
 	
 }
