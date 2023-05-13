@@ -47,13 +47,13 @@ return  serviceLigneLivraison.AjouteInfoligneLivraison(ligneLivraisonDTO);
 
 
 ///////////Modefier////////////////////////////
-@PutMapping(path="/PutLigneLivraison/{id}")
+@PutMapping(path="/PutLigneLivraison/{id}/file/{fileid}")
 @ResponseStatus(code = HttpStatus.ACCEPTED)
 
-public void ModefierLigneLivraisonDTO(@RequestBody LigneLivraisonDTO ligneLivraisonDTO, @PathVariable long id ) {
+public void ModefierLigneLivraisonDTO(@RequestBody LigneLivraisonDTO ligneLivraisonDTO, @PathVariable long id,@PathVariable long fileid ) {
 	log.trace(" RestControlerLigneLivraison la methode ModefierLigneLivraisonDTO");
 
-	serviceLigneLivraison.ModefierLigneLivraisonDTO(ligneLivraisonDTO,id);
+	serviceLigneLivraison.ModefierLigneLivraisonDTO(ligneLivraisonDTO,id,fileid);
 
 }
 ///////////////////////// DELETE  LigneLivraison ///////////////////

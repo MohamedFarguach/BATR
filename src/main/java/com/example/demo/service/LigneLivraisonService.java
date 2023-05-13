@@ -69,9 +69,9 @@ return  null;
 long id2;
 //////////////////Modefier LigneLivraison //////////////////////
 
-public LigneLivraisonDTO ModefierLigneLivraisonDTO(LigneLivraisonDTO ligneLivraisonDTO,long id){
+public LigneLivraisonDTO ModefierLigneLivraisonDTO(LigneLivraisonDTO ligneLivraisonDTO,long id,long fileid){
 	FilelivraisonDTO filelivraison = new FilelivraisonDTO();
-	filelivraison.setId(id2);
+	filelivraison.setId(fileid);
 	ligneLivraisonDTO.setFilelivraison(filelivraison);
 LigneLivraison ligneLivraison = modelMapper.map(ligneLivraisonDTO, LigneLivraison.class);
 try {
