@@ -36,38 +36,7 @@ public class AppSecu3Application {
 		CommandLineRunner start(ServiceSec accountService,UsersService service) {
 			
 			return args -> {
-			//
-				/*
-				 * accountService.addNewRole(new AppRole(null,"Superviseur"));
-				 * accountService.addNewRole(new AppRole(null,"ADMIN"));
-				 * accountService.addNewRole(new AppRole(null,"Consultant"));
-				 * accountService.addNewRole(new AppRole(null,"Demandeur"));
-				 */
-				     
-				/*
-				 * AppRoleDTO role=new AppRoleDTO(); role.setId((long) 8);
-				 * role.setRoleName("ADMIN");
-				 */
-				  
-				// accountService.addNewUser(new Users("null","mohamed"));
-				// accountService.addNewUser(new Users());
-				  //   UserDTO userdto = new UserDTO();
-				  //   userdto.setId((long) 8);
-				/*
-				 * userdto.setPassword("1234"); userdto.setPrenom("e");
-				 * userdto.setUsername("ee"); userdto.setEmail("r"); userdto.setAppRole(role);
-				 * 
-				 * service.AjouteInfoUser(userdto);
-				 */
-				 // accountService.addNewUser(new Users(null,"user3","1234",new ArrayList<>()));
-				  
-				 // accountService.addRoleToUser("user1", "ADMIN");
-				//  accountService.addRoleToUser("user3", "USER");
-				//  accountService.addRoleToUser("user2", "ADMIN"); 
-			 // accountService.addRoleToUser("user4", "ADMIN");
-				//  accountService.addRoleToUser("user4", "ADMIN");
-				 
-					//  
+			
 			
 			};
 	  }

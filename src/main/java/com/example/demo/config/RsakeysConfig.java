@@ -14,8 +14,5 @@ import lombok.NoArgsConstructor;
 public class RsakeysConfig {
     private RSAPublicKey publicKey;
     private RSAPrivateKey privateKey;
-    
-    
-
-    
+   
 }

@@ -75,7 +75,6 @@ public class SecurityConfig {
 		  @Bean
 		  public SecurityFilterChain filterChain(HttpSecurity httpSecurity)
 		  throws Exception { 
-			  System.out.println("ana hna 6"); 
 			  return httpSecurity
 		  
 		  .csrf(csrf->csrf.disable())
@@ -91,7 +90,7 @@ public class SecurityConfig {
 			  }
 		  @Bean
 		  public JwtDecoder jwtDecoder() { 
-			  System.out.println("ana hna 8");
+			  
 		  return
 				  NimbusJwtDecoder.withPublicKey (rsakeysConfig.getPublicKey()).build();
 		  		  
@@ -99,7 +98,7 @@ public class SecurityConfig {
 		  
 		  @Bean
 		  public JwtEncoder jwtEncoder() { 
-			  System.out.println("ana hna 9"); 
+			   
 			  JWK jwk = new
 		  RSAKey.Builder(rsakeysConfig.getPublicKey()).privateKey(rsakeysConfig.getPrivateKey()).build(); 
 			  JWKSource<com.nimbusds.jose.proc.SecurityContext> jwkSource =new ImmutableJWKSet<>(new JWKSet(jwk));
