@@ -44,8 +44,6 @@ public LigneLivraisonDTO AjouteLigneLivraisonDTO(@RequestBody LigneLivraisonDTO 
 return  serviceLigneLivraison.AjouteInfoligneLivraison(ligneLivraisonDTO);
 }
 
-
-
 ///////////Modefier////////////////////////////
 @PutMapping(path="/PutLigneLivraison/{id}/file/{fileid}")
 @ResponseStatus(code = HttpStatus.ACCEPTED)
